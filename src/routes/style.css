@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-img {
-  display: block;
-}
-
 .pile {
   display: grid;
 
@@ -42,16 +38,22 @@ img {
 }
 
 .folder {
-  cursor: pointer;
+  @apply flex flex-col gap-2 cursor-pointer;
+
+  h3 {
+    @apply text-lg font-medium;
+  }
 
   &:hover {
     --x-translate: 0.75rem;
-    --y-translate: 0.5rem;
+    --y-translate: 1rem;
   }
 }
 
 .thumbnail {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @apply rounded-xl overflow-hidden;
+}
+
+.folder-list {
+  display: flex;
 }
