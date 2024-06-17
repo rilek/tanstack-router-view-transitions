@@ -17,19 +17,17 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     transition: all 0.15s;
 
-    &:nth-child(1) {
-      order: 1;
+    &:nth-child(3) {
       rotate: 0deg;
+      translate: 0 0;
     }
 
     &:nth-child(2) {
-      order: -1;
       rotate: -3deg;
       translate: calc(-1 * var(--x-translate)) calc(-1 * var(--y-translate));
     }
 
-    &:nth-child(3) {
-      order: -2;
+    &:nth-child(1) {
       rotate: 5deg;
       translate: calc(1 * var(--x-translate)) calc(-1 * var(--y-translate));
     }
@@ -40,7 +38,7 @@
   @apply flex flex-col gap-2 cursor-pointer;
 
   h3 {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium text-center;
   }
 
   &:hover {
@@ -50,7 +48,7 @@
 }
 
 .thumbnail {
-  @apply rounded-xl overflow-hidden;
+  @apply overflow-hidden rounded-xl aspect-square contain-layout;
 }
 
 .folder-list {
