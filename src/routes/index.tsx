@@ -20,6 +20,7 @@ const FolderLink = ({ index }: { index: number }) => (
     to={"/folders/$folder"}
     params={{ folder: index.toString() }}
     preload="intent"
+    className="text-inherit"
   >
     <article className="folder">
       <div className="pile">
