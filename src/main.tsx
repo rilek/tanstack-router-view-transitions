@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import './view-transitions.css'
 
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
